@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation  'io.appium:java-client:8.3.0'
+    implementation  'com.codeborne:selenide:6.13.0'
+    implementation  'org.testng:testng:7.1.0'
+    implementation  'junit:junit:4.13.2'
+    implementation  'org.testng:testng:7.0.0-beta7'
+    implementation  'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation  'org.apache.pdfbox:pdfbox:2.0.27'
+    implementation  'org.assertj:assertj-core:3.24.2'
+    implementation  'com.codeborne:selenide-appium:2.7.1'
+}
+
+test {
+    useJUnitPlatform()
+    useTestNG()
+    useJUnit()
+}
